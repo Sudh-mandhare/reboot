@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import logo from "../assets/vnit_logo.webp";
 import Hod from "../hodDesk/hod";
 import Dean from "../DeanDesk/dean";
-import Director from"../directorDesk/director"
-
+import Director from"../directorDesk/director";
+import Prof from "../ProfDesk/Prof";
+import StoreSec from "../StoreSection/storeSec";
 // Define different components for different roles
-
+import CustomizedAccordions from"../AccountDept/Account"
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -15,16 +16,23 @@ const LoginPage = () => {
 
   const handleSignIn = () => {
     // Simple validation for demonstration
-    if (email === "profvnit@gmail.com" && password === "12345678") {
+    if (email === "profvnit@gmail.com" && password === "1") {
       // Simulating a successful login
       setUserRole("prof");
-    } else if (email === "hodvnit@gmail.com" && password === "12345678") {
+    } else if (email === "hodvnit@gmail.com" && password === "1") {
       setUserRole("hod");
-    } else if (email === "deanvnit@gmail.com" && password === "12345678") {
+    } else if (email === "deanvnit@gmail.com" && password === "1") {
       setUserRole("dean");
-    } else if (email === "directorvnit@gmail.com" && password === "12345678") {
+    } else if (email === "directorvnit@gmail.com" && password === "1") {
       setUserRole("director");
-    } else {
+    } 
+    else if (email === "storemanagervnit@gmail.com" && password === "1") {
+      setUserRole("storeManager");
+    } 
+    else if (email === "accvnit@gmail.com" && password === "1") {
+      setUserRole("accManager");
+    }
+    else {
       setError("Invalid email or password");
     }
   };
@@ -33,13 +41,24 @@ const LoginPage = () => {
   const renderDashboard = () => {
     switch (userRole) {
       case "prof":
-      
+      return<Prof/>;
       case "hod":
         return <Hod/>;
       case "dean":
         return <Dean />;
       case "director":
         return <Director/>
+      case"storeManager":
+      
+        
+        return <StoreSec/>
+        case"accManager":
+        return <CustomizedAccordions/>
+      
+        
+        return <cu/>
+      
+      
       default:
         return (
           
@@ -76,11 +95,14 @@ const LoginPage = () => {
                 <div className='mt-8 flex items-center justify-between'>
                   <div></div>
                   <button
-                    onClick={handleSignIn}
-                    className='bg-[#3F8DF8] text-white rounded-xl text-lg font-semibold py-2 active:scale-[0.98] hover:scale-[1.01] ease-in-out transition-all active:duration-75'
-                  >
-                    Sign In
-                  </button>
+  onClick={handleSignIn}
+  className='bg-[#3F8DF8] text-white rounded-xl text-lg font-semibold py-3 px-6 
+             active:scale-[0.98] hover:scale-[1.01] ease-in-out transition-all 
+             active:duration-75 shadow-md hover:shadow-lg'
+>
+  Sign In
+</button>
+
                 </div>
                 <div className='flex justify-center items-center mt-8'>
                   <p className='font-medium text-base'>Don't have an account?</p>

@@ -14,6 +14,15 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
+const pages = [
+    { title: 'Add/Update Item', path: '/add-update-item' },
+    { title: 'Notifications', path: '/notifications' },
+    { title: 'Store Section', path: '/store-section' },
+    { title: 'Funds Remaining', path: '/funds-remaining' },
+    { title: 'Forms', path: '/forms' },
+   
+   
+];
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -38,16 +47,10 @@ function ResponsiveAppBar() {
   };
 
   const handleMenuItemClick = (path) => {
-    handleCloseNavMenu(); // Close the menu when a menu item is clicked
-    // You can navigate to the specified path here
+    // Close the menu when a menu item is clicked
+    handleCloseNavMenu();
+    // No need to navigate using window.location.href, use <Link> component instead
   };
-  const pages = [
-    { title: 'Requests', path: '/requests' },
-    { title: 'Timeline', path: '/timeline' },
-    { title: 'Request Progress', path: '/request-progress' },
-    { title: 'Funds Remaining', path: '/funds-remaining' },
-    { title: 'Forms', path: '/form-appendix' }
-  ];
 
   return (
     <AppBar position="static">
@@ -108,7 +111,25 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          
+          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Typography
+            variant="h5"
+            noWrap
+            component={Link}
+            to="/store-section"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            VNITHUB
+          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button

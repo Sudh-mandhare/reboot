@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Approved from '../DeanDesk/Approved';
 import FundsRemaining from '../FundsRemaining/FundsRemaining';
 import RequestPending from '../DeanDesk/RequestPending'
-import RequestProgress from '../DeanDesk/RequestProgress';
+import { Timeline } from '@mui/icons-material';
+
 
 const director = () => {
   return (
@@ -15,7 +16,7 @@ const director = () => {
       <Routes>
         <Route path="/requests-approved" element={<Approved />} />
         <Route path="/request-pending" element={<RequestPending />} />
-        <Route path="/request-progress" element={<RequestProgress />} />
+        <Route path="/timeline" element={<Timeline/>} />
         <Route path="/funds-remaining" element={<FundsRemaining />} />
       </Routes>
     </Router>

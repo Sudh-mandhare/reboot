@@ -5,7 +5,7 @@ const FundsRemaining = () => {
   return (
     <div>
           <TotalExpend/>
-        <Detailinfo/>
+        {/* <Detailinfo/> */}
       
       
     </div>

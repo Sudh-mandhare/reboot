@@ -30,7 +30,10 @@ export default function AccordionUsage() {
         <AccordionActions>
           <Button>Approve</Button>
           <Button>Apply for Dean</Button>
+         
           <Button>Reject</Button>
+          <br/>
+          <input type='text' placeholder='Enter suggestions' className='w-500 h-12'></input>
         </AccordionActions>
         
       </Accordion>
@@ -49,6 +52,7 @@ export default function AccordionUsage() {
           <Button>Approve</Button>
           <Button>Apply for Dean</Button>
           <Button>Reject</Button>
+          <input type='text' placeholder='Enter suggestions' className='w-500 h-12'></input>
         </AccordionActions>
         
       </Accordion>
@@ -67,6 +71,7 @@ export default function AccordionUsage() {
           <Button>Approve</Button>
           <Button>Apply for Dean</Button>
           <Button>Reject</Button>
+          <input type='text' placeholder='Enter suggestions' className='w-500 h-12'></input>
         </AccordionActions>
         
       </Accordion>
@@ -85,6 +90,7 @@ export default function AccordionUsage() {
           <Button>Approve</Button>
           <Button>Apply for Dean</Button>
           <Button>Reject</Button>
+          <input type='text' placeholder='Enter suggestions' className='w-500 h-12'></input>
         </AccordionActions>
         
       </Accordion>
@@ -104,6 +110,7 @@ export default function AccordionUsage() {
           <Button>Approve</Button>
           <Button>Apply for Dean</Button>
           <Button>Reject</Button>
+          <input type='text' placeholder='Enter suggestions' className='w-500 h-12'></input>
         </AccordionActions>
         
       </Accordion>
@@ -122,6 +129,7 @@ export default function AccordionUsage() {
           <Button>Approve</Button>
           <Button>Apply for Dean</Button>
           <Button>Reject</Button>
+          <input type='text' placeholder='Enter suggestions' className='w-500 h-12'></input>
         </AccordionActions>
         
       </Accordion>
@@ -132,7 +140,7 @@ export default function AccordionUsage() {
           aria-controls="panel3-content"
           id="panel3-header"
         >
-          Request 4
+          Request 7
         </AccordionSummary>
         <AccordionDetails>
         Professor Singh is requesting computer software licenses in a quantity of 5 units. The total budget allocated for this request is ₹10,000.
@@ -141,6 +149,7 @@ export default function AccordionUsage() {
           <Button>Approve</Button>
           <Button>Apply for Dean</Button>
           <Button>Reject</Button>
+          <input type='text' placeholder='Enter suggestions' className='w-500 h-12'></input>
         </AccordionActions>
         
       </Accordion>

@@ -6,7 +6,7 @@ const timeline = () => {
   return (
     <div>
          <Quonto/>
-      <Ctimeline/>
+      {/* <Ctimeline/> */}
      
       
     </div>

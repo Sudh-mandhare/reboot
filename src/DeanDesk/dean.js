@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Approved from './Approved';
 import FundsRemaining from '../FundsRemaining/FundsRemaining.js';
 import RequestPending from './RequestPending';
-import RequestProgress from './RequestProgress';
+import Timeline from '../hodDesk/timeline/timeline.js';
+
 
 const Dean = () => {
   return (
@@ -14,7 +15,8 @@ const Dean = () => {
       <Routes>
         <Route path="/requests-approved" element={<Approved />} />
         <Route path="/request-pending" element={<RequestPending />} />
-        <Route path="/request-progress" element={<RequestProgress />} />
+        <Route path="/timeline" element={<Timeline/>} />
+        
         <Route path="/funds-remaining" element={<FundsRemaining />} />
       </Routes>
     </Router>
